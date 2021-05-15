@@ -37,4 +37,7 @@
 5) DCT gives good compromise between information packing ability and computational complexity.
 
 
+*Block Diagram 
+![image](https://user-images.githubusercontent.com/76968308/118371396-1e38eb00-b5ca-11eb-8cd9-f11db125ed09.png)
+
 ![image](https://user-images.githubusercontent.com/76968308/118371376-fb0e3b80-b5c9-11eb-8c9f-c869812b2ee7.png)
