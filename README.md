@@ -124,14 +124,47 @@ Entropy Encoding -
 After quantization, most of the high frequency coefficients are zeros. To exploit the number of zeros, a zig-zag scan of the matrix is used yielding to long string of zeros. 
 
 Once a block has been converted to a spectrum and quantized, the JPEG compression algorithm then takes the result and converts it into a one dimensional linear array, or vector of 64 values, performing a zig-zag scan by selecting the elements in the numerical order indicated by the numbers in the grid below : 
-![image](https://user-images.githubusercontent.com/76968308/118371634-1f1e4c80-b5cb-11eb-9ddc-f142d01b01d2.png)
+		0 		1		 2		 3	 	4	 	5	 	6		 7 
+     ____________________________________________________________________________________________________________________________________
+0: 		0 		1 		 5		 6		14		15		27		 28 
+
+1:		2		4	 	 7 		13	 	 16		 26		 29		 42 
+
+2: 		3		8	 	12 		17 		 25	 	 30		 41		 43 
+
+3: 		9	       11	 	18 		24 		  31		 40		 44		 53 
+
+4: 		10	       19	 	23	 	32 		  39 		 45		 52		 54
+
+5: 		20		22 		33 		38	 	  46	 	 51 		 55		 60
 
 
 
+** Image Reconstruction **
+
+- Compressed image is reconstructed through reverse process. 
+
+- Inverse DCT (IDCT) is used for reconstruction.
+
+![image](https://user-images.githubusercontent.com/76968308/118371714-83d9a700-b5cb-11eb-85b2-80c686b0bb96.png)
 
 
+1. Entropy Decoding :
+- The reverse process of encoding is implemented on the receiver side and the compressed image data in the form of binary stream is decoded using Huffman dictionary and the binary stream is converted back in the symbols.
 
 
+2. Dequantization :
+- In the dequantization process the quantized coefficients are dequantized and inverse DCT process is applied on the dequantized coefficients which results in the decompressed image.
 
 
+3. IDCT :
+- The IDCT transformation is given by the following equation :
 
+	 "f(x,y) "= ∑_(𝑢=0)^(𝑁−1)▒∑_(𝑣=0)^(𝑁−1)▒"D(u)D(v)D(u,v) cos[(2x+1)hπ/2N] cos[(2y+1)wπ/2N]" 
+
+	Where, 
+D(u) = (1/N)^1/2 for u = 0 
+D(u) = (2/N)^1/2 for u = 1, 2, 3, ……., (N-1). 
+
+
+*Original Images, Compressed Images and Reconstructed Images can be found in Images Folder.*
