@@ -1,1 +1,2 @@
-# Digital-Signal-Processing
+# Digital Image Compression using DCT & Reconstruction using IDCT
+
