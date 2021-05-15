@@ -123,20 +123,8 @@
 Entropy Encoding -
 After quantization, most of the high frequency coefficients are zeros. To exploit the number of zeros, a zig-zag scan of the matrix is used yielding to long string of zeros. 
 
-Once a block has been converted to a spectrum and quantized, the JPEG compression algorithm then takes the result and converts it into a one dimensional linear array, or vector of 64 values, performing a zig-zag scan by selecting the elements in the numerical order indicated by the numbers in the grid below : 
-		0 		1		 2		 3	 	4	 	5	 	6		 7 
-     ____________________________________________________________________________________________________________________________________
-0: 		0 		1 		 5		 6		14		15		27		 28 
+Once a block has been converted to a spectrum and quantized, the JPEG compression algorithm then takes the result and converts it into a one dimensional linear array, or vector of 64 values, performing a zig-zag scan by selecting the elements in the numerical order. 
 
-1:		2		4	 	 7 		13	 	 16		 26		 29		 42 
-
-2: 		3		8	 	12 		17 		 25	 	 30		 41		 43 
-
-3: 		9	       11	 	18 		24 		  31		 40		 44		 53 
-
-4: 		10	       19	 	23	 	32 		  39 		 45		 52		 54
-
-5: 		20		22 		33 		38	 	  46	 	 51 		 55		 60
 
 
 
