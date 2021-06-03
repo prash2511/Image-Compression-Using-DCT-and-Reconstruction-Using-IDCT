@@ -156,4 +156,4 @@ D(u) = (1/N)^1/2 for u = 0
 D(u) = (2/N)^1/2 for u = 1, 2, 3, ……., (N-1). 
 
 
-*Original Images, Compressed Images and Reconstructed Images can be found in Images Folder.*
+*Original Images, Compressed Images and Reconstructed Images and code can be found in another Folders.*
