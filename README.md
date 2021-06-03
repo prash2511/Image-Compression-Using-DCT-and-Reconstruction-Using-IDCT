@@ -1,3 +1,4 @@
+Digital Signal Processing Mini-Project
 # Digital Image Compression using DCT & Reconstruction using IDCT
 
 
