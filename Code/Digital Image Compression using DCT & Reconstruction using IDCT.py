@@ -43,7 +43,7 @@ for row in range(blocksV):
         currentblock = cv2.dct(vis[row * B : (row + 1) * B, col * B : (col + 1) * B])
         Trans[row * B : (row + 1) * B, col * B : (col + 1) * B] = currentblock
 
-cv2.imwrite('Lighthouse_Compressed.jpg', Trans)
+cv2.imwrite('Emma_Compressed.jpg', Trans)
 
 
 
@@ -56,4 +56,4 @@ for row in range(blocksV):
         currentblock = cv2.idct(Trans[row * B : (row + 1) * B, col * B : (col + 1) * B])
         back[row * B : (row + 1) * B, col * B : (col + 1) * B] = currentblock
 
-cv2.imwrite('Lighthouse_Reconstructed.jpg', back)
+cv2.imwrite('Emma_Reconstructed.jpg', back)
